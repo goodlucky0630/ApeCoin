@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+
+# Twitterbot
+User-agent: Twitterbot
+Allow: /
+
+# facebookexternalhit
+User-agent: facebookexternalhit
+Allow: /
+
+# Host
+Host: https://www.apecoinstaking.io/
+
+# Sitemaps
+Sitemap: https://www.apecoinstaking.io/sitemap.xml

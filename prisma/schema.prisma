@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+model Offers {
+  id                Int      @id @default(autoincrement())
+  owner             String
+  signersAddress    String
+  vault             String
+  signature         String
+  nonce             String
+  duration          String
+  deadline          String
+  numOfInstallments String
+  interestRate      String
+  principal         String
+  repayment         String
+  collateralAddress String
+  status            String
+  itemsHash         String
+  vaultTokenId      String
+  lendersAddress    String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Item {
+  id       Int    @id @default(autoincrement())
+  contract String
+  tokenId  String
+  vault    String
+
+  @@unique([contract, tokenId])
+}
